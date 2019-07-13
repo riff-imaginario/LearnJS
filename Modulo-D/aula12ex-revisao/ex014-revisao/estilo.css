@@ -20,6 +20,11 @@ section {
     color: black;
 }
 
+div {
+    text-align: center;
+    padding: 8px;
+}
+
 footer {
     font-style: italic;
 }
