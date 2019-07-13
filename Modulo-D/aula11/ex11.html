@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>País</title>
+</head>
+<body>
+    <h1>Verificador de Estrangeiros</h1>
+
+    País em que está vivendo: <input type="text" name="txtPais" id="txtPais">
+    <input type="button" value="Verificar" onclick="is_estrangeiro()">
+    <div id="res"></div>
+
+    <script>
+        function is_estrangeiro() {
+            var pais = document.querySelector('input#txtPais').value
+            var res  = document.querySelector('div#res')
+            
+            res.innerHTML = `<p>Vivendo em ${pais}</p>`
+
+            if (pais == 'Brasil' || pais == 'Brazil')
+                res.innerHTML += `<p>Brasileiro!</p>`
+            else
+                res.innerHTML += `<p>Estrangeiro!</p>`
+        }
+    </script>
+</body>
+</html>

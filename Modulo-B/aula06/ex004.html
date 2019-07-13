@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.writeln(`Seu nome tem ${nome.length} letras.`)
+
+        // Funciona no NodeJS, mas nao no navegador...        
+        var numero = prompt('Digite um número:')
+        var real = numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        var dollar = numero.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})
+        var euro = numero.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'})
+
+        document.writeln(real)
+        document.writeln(dollar)
+        document.writeln(euro)
+    </script>
+</body>
+</html>
