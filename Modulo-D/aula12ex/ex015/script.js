@@ -11,28 +11,36 @@ function verificar() {
         var fsex   = document.getElementsByName('radsex')
         var idade  = ano - Number(fano.value) 
         var genero = ''
+        var img    = document.createElement('img')
 
-        if (fsex[0].checked)
+        img.setAttribute('id', 'foto')
+
+        if (fsex[0].checked) {
             genero = 'Homem'
-
+            img.setAttribute('src', '')
             if (idade >= 0 && idade < 10)
-                // Criança
+                img.setAttribute('src', 'img/foto_crianca_m.png')
             else if (idade < 21)
-                // Jovem
+                img.setAttribute('src', 'img/foto_jovem_m.png')
             else if (idade < 50)
-                // Adulto
+                img.setAttribute('src', 'img/foto_adulto_m.png')
             else
-                // Idoso
-        else if (fsex[1].checked)
+                img.setAttribute('src', 'img/foto_idoso_m.png')
+        } else if (fsex[1].checked) {
             genero = 'Mulher'
 
             if (idade >= 0 && idade < 10)
-                // Criança
+                img.setAttribute('src', 'img/foto_crianca_f.png')
             else if (idade < 21)
-                // Jovem
+                img.setAttribute('src', 'img/foto_jovem_f.png')
             else if (idade < 50)
-                // Adulto
+                img.setAttribute('src', 'img/foto_adulto_f.png')
             else
-                // Idoso
+                img.setAttribute('src', 'img/foto_idoso_f.png')
+        }
+
+        res.style.textAlign = 'center'
+        res.innerHTML = ''
+        res.appendChild(img)  // adiciona conteúdo abaixo (Child)
     }
 }
