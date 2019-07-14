@@ -5,7 +5,7 @@ function verificar() {
     var res  = document.getElementById('res')
 
     // Verifica se usuário digitou algum número e se esse número é > que ano atual
-    if (fano.value.length < 4 || Number(fano.value) > ano || fano.value < 1900) {
+    if (fano.value.length != 4 || Number(fano.value) > ano || fano.value < 1900) {
         alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
         var fsex   = document.getElementsByName('radsex')
